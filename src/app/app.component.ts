@@ -1,15 +1,6 @@
 import {Component, OnInit, signal, WritableSignal} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {HlmButtonDirective} from "@spartan-ng/ui-button-helm";
-import {
-  HlmCardContentDirective,
-  HlmCardDirective,
-  HlmCardHeaderDirective,
-  HlmCardImports
-} from "@spartan-ng/ui-card-helm";
-import {HlmInputDirective} from "@spartan-ng/ui-input-helm";
-import {HlmLabelDirective} from "@spartan-ng/ui-label-helm";
-import {HlmIconComponent} from "@spartan-ng/ui-icon-helm";
+
 import {provideIcons} from "@ng-icons/core";
 import {lucideLink2, lucideMapPin} from "@ng-icons/lucide";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
@@ -17,6 +8,16 @@ import {TitleCasePipe} from "./component/pipe/title-case.pipe";
 import {LowerCasePipe, UpperCasePipe} from "@angular/common";
 import * as htmlToImage from 'html-to-image';
 import download from 'downloadjs';
+import {HlmButtonDirective} from "./component/libs/ui-button-helm/src";
+import {
+  HlmCardContentDirective,
+  HlmCardDirective,
+  HlmCardHeaderDirective,
+  HlmCardImports
+} from "./component/libs/ui-card-helm/src";
+import {HlmInputDirective} from "./component/libs/ui-input-helm/src";
+import {HlmLabelDirective} from "./component/libs/ui-label-helm/src";
+import {HlmIconComponent} from "./component/libs/ui-icon-helm/src";
 
 @Component({
   selector: 'app-root',
