@@ -11,6 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
+    "@angular/cdk": "^18.2.4",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",
@@ -18,6 +19,16 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@ng-icons/core": "^25.1.0",
+    "@ng-icons/lucide": "^29.5.0",
+    "@spartan-ng/ui-core": "^0.0.1-alpha.355",
+    "@spartan-ng/ui-formfield-brain": "0.0.1-alpha.355",
+    "@spartan-ng/ui-forms-brain": "0.0.1-alpha.355",
+    "@spartan-ng/ui-label-brain": "0.0.1-alpha.355",
+    "class-variance-authority": "^0.6.0",
+    "clsx": "^2.1.1",
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^1.11.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
@@ -26,6 +37,8 @@
     "@angular-devkit/build-angular": "^18.2.4",
     "@angular/cli": "^18.2.4",
     "@angular/compiler-cli": "^18.2.0",
+    "@spartan-ng/cli": "^0.0.1-alpha.365",
+    "@types/downloadjs": "^1.4.6",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
@@ -33,6 +46,9 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "^3.4.12",
+    "tailwindcss-animate": "^1.0.6",
     "typescript": "~5.5.2"
   }
 }
