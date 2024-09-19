@@ -29,10 +29,8 @@ import {HlmIconComponent} from "./component/libs/ui-icon-helm/src";
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  name: WritableSignal<string> = signal('');
-
-
   title = 'signatureGen';
+  name: WritableSignal<string> = signal('');
   email: WritableSignal<string> = signal('');
   phone: WritableSignal<string> = signal('');
   titles: WritableSignal<string> = signal('');
