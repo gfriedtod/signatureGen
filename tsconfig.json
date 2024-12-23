@@ -21,9 +21,6 @@
       "ES2022",
       "dom"
     ],
-    "paths": {
-
-    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -5,7 +5,7 @@ import {provideIcons} from "@ng-icons/core";
 import {lucideLink2, lucideMapPin} from "@ng-icons/lucide";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {TitleCasePipe} from "./component/pipe/title-case.pipe";
-import {LowerCasePipe, UpperCasePipe} from "@angular/common";
+import {LowerCasePipe, NgClass, UpperCasePipe} from "@angular/common";
 import * as htmlToImage from 'html-to-image';
 import download from 'downloadjs';
 import {HlmButtonDirective} from "./component/libs/ui-button-helm/src";
@@ -17,14 +17,17 @@ import {
 } from "./component/libs/ui-card-helm/src";
 import {HlmInputDirective} from "./component/libs/ui-input-helm/src";
 import {HlmLabelDirective} from "./component/libs/ui-label-helm/src";
-import {HlmIconComponent} from "./component/libs/ui-icon-helm/src";
+import {HlmIconComponent} from "./component/ui-icon-helm/src";
+import {HlmSelectImports} from "./component/ui-select-helm/src";
+import {BrnSelectImports} from "@spartan-ng/ui-select-brain";
+import {SnowComponent} from "./component/snow/snow.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   providers: [provideIcons({lucideMapPin, lucideLink2})],
 
-  imports: [RouterOutlet, HlmButtonDirective, HlmButtonDirective, HlmCardDirective, HlmInputDirective, HlmLabelDirective, HlmCardContentDirective, HlmCardHeaderDirective, HlmCardHeaderDirective, HlmButtonDirective, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmCardImports, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmIconComponent, HlmIconComponent, ReactiveFormsModule, TitleCasePipe, UpperCasePipe, LowerCasePipe],
+  imports: [RouterOutlet, HlmButtonDirective, HlmButtonDirective, HlmCardDirective, HlmInputDirective, HlmLabelDirective, HlmCardContentDirective, HlmCardHeaderDirective, HlmCardHeaderDirective, HlmButtonDirective, HlmIconComponent, HlmCardImports, HlmIconComponent, ReactiveFormsModule, TitleCasePipe, UpperCasePipe, LowerCasePipe, HlmSelectImports, BrnSelectImports, NgClass, SnowComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -34,14 +37,14 @@ export class AppComponent implements OnInit {
   email: WritableSignal<string> = signal('');
   phone: WritableSignal<string> = signal('');
   titles: WritableSignal<string> = signal('');
+  theme: WritableSignal<String> = signal('1');
   form: FormGroup = new FormGroup({
     name: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     phone: new FormControl('', Validators.required),
-    titles: new FormControl('', Validators.required)
+    titles: new FormControl('', Validators.required),
+    theme: new FormControl('1', Validators.required),
   })
-  protected readonly lucideMapPin = lucideMapPin;
-  protected readonly lucideLink2 = lucideLink2;
 
   ngOnInit(): void {
 
@@ -50,6 +53,7 @@ export class AppComponent implements OnInit {
       this.email.update(value => changes.email);
       this.phone.update(value => changes.phone);
       this.titles.update(value => changes.titles);
+      this.theme.update(value => changes.theme);
       console.log(changes);
     })
   }

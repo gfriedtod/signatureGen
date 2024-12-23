@@ -10,7 +10,9 @@ module.exports = {
     extend: {
       backgroundImage:{
         'logo' : "url('app/assets/logo.png')",
-        'gradiant' : "linear-gradient(90deg, #cdffd8 0%, #94b9ff 100%)"
+        'gradiant' : "linear-gradient(90deg, #cdffd8 0%, #94b9ff 100%)",
+        'christmas': "url('app/assets/christmas.jpg')",
+        'merry': "url('app/assets/merry.png')",
       }
 
     },

@@ -1,6 +1,5 @@
 <main class="w-full flex flex-col justify-center items-center p-10">
   <div class="w-10">
-
   </div>
   <div class="w-[25rem] border-2  p-3" hlmCard>
     <div class="font-bold text-3xl" hlmCardHeader>
@@ -25,15 +24,32 @@
         <input class="w-full" formControlName="phone" hlmInput id="Phone" type="text"/>
       </div>
 
+      <div>
+        <label for="theme" hlmLabel>theme</label>
+        <brn-select class="w-full inline-block"  placeholder="Select theme" formControlName="theme"  id="theme" >
+          <hlm-select-trigger class="w-full  " >
+            <hlm-select-value />
+          </hlm-select-trigger>
+
+          <hlm-select-content>
+              <hlm-option [value]="'1'">Normal</hlm-option>
+              <hlm-option [value]="'2'">Noel</hlm-option>
+            </hlm-select-content>
+
+
+
+        </brn-select>
+      </div>
+
     </div>
     <div class="p-3 flex justify-end items-center" hlmCardFooter>
-      <button (click)="generateImage()" class="w-1/3" hlmBtn>Save</button>
+      <button [ngClass]="theme() =='2' ? 'bg-red-500 text-white' : ''" (click)="generateImage()" class="w-1/3" hlmBtn>Save</button>
     </div>
 
 
   </div>
   <div class="h-14"></div>
-
+@if(theme() == '1'){
   <div id="image-section">
     <div class="w-[150vh] bg-gradiant h-52  relative flex justify-between items-center p-3">
       <svg class="absolute w-16 rotate-[-90deg] left-1 top-1" original_string_length="1972"
@@ -92,6 +108,77 @@
     </div>
 
   </div>
+
+}@else{
+  <div id="image-section">
+    <div class=" w-[150vh] h-52 relative  ">
+      <div class="absolute w-full h-full indent-0 bg-christmas bg-cover blur-sm">
+
+      </div>
+      <div class="absolute w-full h-full indent-0 flex justify-between items-center p-3">
+        <svg class="absolute w-16 rotate-[-90deg] left-1 top-1" original_string_length="1972"
+             preserveAspectRatio="xMidYMid meet" style="fill: rgb(0, 0, 0);"
+             version="1.0" viewBox="0.7 0.7 248.7 248.7" xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify">
+          <g>
+            <g id="__id21_s89oz2r85">
+              <path
+                d="m9.8425 240.16v-26.575h26.575v26.575h-26.575zm26.575 8.8583h8.8583v-44.291h-44.291v44.291h35.433zm-26.575-62.008v-70.866h44.291v44.291h-17.717v-26.575h-8.8583v35.433h35.433v-62.008h-26.575v-53.15h26.575v-8.8583h-35.433v62.008h-17.717v-106.3h-8.8583v194.88h53.15v53.15h194.88v-8.8583h-106.3v-17.717h62.008v-35.433h-8.8583v26.575h-53.15v-26.575h-62.008v35.433h53.15v17.717h-70.866v-53.15h-53.15zm124.02 26.575h-44.291v-17.717h44.291v17.717zm-44.291-53.15v-26.575h26.575v26.575h-26.575zm26.575 8.8583h8.8583v-44.291h-44.291v44.291h35.433z"
+                style="fill: rgb(0, 114, 158);" transform="rotate(180 125 125)"/>
+            </g>
+            <g id="__id22_s89oz2r85">
+              <path
+                d="m0.65625 0.65625v195.53h53.156v53.156h195.53v-9.5h-106.31v-17.094h62v-36.062h-9.4688v26.594h-52.531v-26.594h-62.625v36.062h53.125v17.094h-70.219v-53.156h-53.156v-70.219h43.656v43.656h-17.094v-26.594h-9.4688v36.062h36.062v-62.625h-26.594v-52.531h26.594v-9.4688h-36.062v62h-17.094v-106.31h-9.5zm0.625 0.625h8.25v106.31h18.344v-62h34.812v8.2188h-26.594v53.781h26.594v61.375h-34.812v-34.812h8.2188v26.594h18.344v-44.906h-44.906v71.469h53.156v53.156h71.469v-18.344h-53.125v-34.812h61.375v26.594h53.781v-26.594h8.2188v34.812h-62v18.344h106.31v8.25h-194.28v-53.156h-53.156v-194.28zm79.125 123.41v44.906h44.906v-44.906h-44.906zm0.625 0.625h43.656v43.656h-43.656v-43.656zm8.2188 8.2188v27.219h27.219v-27.219h-27.219zm0.625 0.625h25.969v25.969h-25.969v-25.969zm-0.625 61.406v18.344h44.906v-18.344h-44.906zm0.625 0.625h43.656v17.094h-43.656v-17.094zm-89.219 8.2188v44.938h44.938v-44.938h-44.938zm0.625 0.625h43.688v43.688h-43.688v-43.688zm8.25 8.25v27.188h27.188v-27.188h-27.188zm0.625 0.625h25.938v25.938h-25.938v-25.938z"
+                style="fill: inherit;" transform="rotate(180 125 125)"/>
+            </g>
+          </g>
+        </svg>
+        <svg class="absolute w-16 rotate-90 right-1 bottom-1" original_string_length="1972"
+             preserveAspectRatio="xMidYMid meet" style="fill: rgb(0, 0, 0);"
+             version="1.0" viewBox="0.7 0.7 248.7 248.7" xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify">
+          <g>
+            <g id="__id21_s89oz2r85">
+              <path
+                d="m9.8425 240.16v-26.575h26.575v26.575h-26.575zm26.575 8.8583h8.8583v-44.291h-44.291v44.291h35.433zm-26.575-62.008v-70.866h44.291v44.291h-17.717v-26.575h-8.8583v35.433h35.433v-62.008h-26.575v-53.15h26.575v-8.8583h-35.433v62.008h-17.717v-106.3h-8.8583v194.88h53.15v53.15h194.88v-8.8583h-106.3v-17.717h62.008v-35.433h-8.8583v26.575h-53.15v-26.575h-62.008v35.433h53.15v17.717h-70.866v-53.15h-53.15zm124.02 26.575h-44.291v-17.717h44.291v17.717zm-44.291-53.15v-26.575h26.575v26.575h-26.575zm26.575 8.8583h8.8583v-44.291h-44.291v44.291h35.433z"
+                style="fill: rgb(0, 114, 158);" transform="rotate(180 125 125)"/>
+            </g>
+            <g id="__id22_s89oz2r85">
+              <path
+                d="m0.65625 0.65625v195.53h53.156v53.156h195.53v-9.5h-106.31v-17.094h62v-36.062h-9.4688v26.594h-52.531v-26.594h-62.625v36.062h53.125v17.094h-70.219v-53.156h-53.156v-70.219h43.656v43.656h-17.094v-26.594h-9.4688v36.062h36.062v-62.625h-26.594v-52.531h26.594v-9.4688h-36.062v62h-17.094v-106.31h-9.5zm0.625 0.625h8.25v106.31h18.344v-62h34.812v8.2188h-26.594v53.781h26.594v61.375h-34.812v-34.812h8.2188v26.594h18.344v-44.906h-44.906v71.469h53.156v53.156h71.469v-18.344h-53.125v-34.812h61.375v26.594h53.781v-26.594h8.2188v34.812h-62v18.344h106.31v8.25h-194.28v-53.156h-53.156v-194.28zm79.125 123.41v44.906h44.906v-44.906h-44.906zm0.625 0.625h43.656v43.656h-43.656v-43.656zm8.2188 8.2188v27.219h27.219v-27.219h-27.219zm0.625 0.625h25.969v25.969h-25.969v-25.969zm-0.625 61.406v18.344h44.906v-18.344h-44.906zm0.625 0.625h43.656v17.094h-43.656v-17.094zm-89.219 8.2188v44.938h44.938v-44.938h-44.938zm0.625 0.625h43.688v43.688h-43.688v-43.688zm8.25 8.25v27.188h27.188v-27.188h-27.188zm0.625 0.625h25.938v25.938h-25.938v-25.938z"
+                style="fill: inherit;" transform="rotate(180 125 125)"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="flex flex-col h-full justify-between items-center">
+          <div></div>
+          <div class="bg-logo bg-contain bg-no-repeat w-72 h-20">
+          </div>
+
+          <div class="flex  justify-center items-center text-xs gap-2 ">
+            <hlm-icon class="text-black" name="lucideMapPin" size="sm"></hlm-icon>
+            <div class="">Ancien College des nations, Bonapriso, Douala</div>
+            <hlm-icon class="text-black" name="lucideLink2" size="sm"></hlm-icon>
+            <div class="">www.bytes-corp.com</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 p-3">
+          <div class=" text-xl font-semibold">{{ name() | titleCase }}</div>
+          <div class="font-bold  sm:text-xl">{{ titles() | uppercase }}</div>
+          <div class=" text-xl font-semibold text-center">{{ email() | lowercase }}</div>
+          <div class="text-xl font-semibold">{{ phone() }}</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="h-5"></div>
+    <div class="w-[150vh] h-72 bg-cover bg-no-repeat bg-merry">
+
+    </div>
+
+  </div>
+
+}
 
 </main>
 
