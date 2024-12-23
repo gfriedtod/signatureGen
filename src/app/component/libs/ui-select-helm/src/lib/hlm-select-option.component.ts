@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input, computed, inject, input } from '@angular/core';
 import { lucideCheck } from '@ng-icons/lucide';
 import { hlm } from '@spartan-ng/ui-core';
+import { BrnSelectOptionDirective } from '@spartan-ng/ui-select-brain';
 import type { ClassValue } from 'clsx';
-import {provideIcons} from "@ng-icons/core";
 import {HlmIconComponent} from "../../../ui-icon-helm/src";
-import {BrnSelectOptionDirective} from "@spartan-ng/ui-select-brain";
+import {provideIcons} from "@ng-icons/core";
 
 @Component({
 	selector: 'hlm-option',

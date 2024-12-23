@@ -17,17 +17,15 @@ import {
 } from "./component/libs/ui-card-helm/src";
 import {HlmInputDirective} from "./component/libs/ui-input-helm/src";
 import {HlmLabelDirective} from "./component/libs/ui-label-helm/src";
-import {HlmIconComponent} from "./component/ui-icon-helm/src";
-import {HlmSelectImports} from "./component/ui-select-helm/src";
+import {HlmIconComponent} from "./component/libs/ui-icon-helm/src";
+import {HlmSelectImports} from "./component/libs/ui-select-helm/src";
 import {BrnSelectImports} from "@spartan-ng/ui-select-brain";
-import {SnowComponent} from "./component/snow/snow.component";
-
 @Component({
   selector: 'app-root',
   standalone: true,
   providers: [provideIcons({lucideMapPin, lucideLink2})],
 
-  imports: [RouterOutlet, HlmButtonDirective, HlmButtonDirective, HlmCardDirective, HlmInputDirective, HlmLabelDirective, HlmCardContentDirective, HlmCardHeaderDirective, HlmCardHeaderDirective, HlmButtonDirective, HlmIconComponent, HlmCardImports, HlmIconComponent, ReactiveFormsModule, TitleCasePipe, UpperCasePipe, LowerCasePipe, HlmSelectImports, BrnSelectImports, NgClass, SnowComponent],
+  imports: [RouterOutlet, HlmButtonDirective, HlmButtonDirective, HlmCardDirective, HlmInputDirective, HlmLabelDirective, HlmCardContentDirective, HlmCardHeaderDirective, HlmCardHeaderDirective, HlmButtonDirective, HlmIconComponent, HlmCardImports, HlmIconComponent, ReactiveFormsModule, TitleCasePipe, UpperCasePipe, LowerCasePipe, HlmSelectImports, BrnSelectImports, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
